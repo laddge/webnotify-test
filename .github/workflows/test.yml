@@ -1,0 +1,14 @@
+name: Main Step
+on:
+  workflow_dispatch:
+
+jobs:
+  composite_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: webnotify
+        uses: laddge/webnotify@v1
+        with:
+          urls: ${{secrets.URLS}}
+          line_token: ${{secrets.LINE_TOKEN}}
+          timezone: Asia/Tokyo
