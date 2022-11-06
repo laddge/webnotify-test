@@ -9,8 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: webnotify
-        uses: laddge/webnotify@v1
+        uses: laddge/webnotify@v2
         with:
-          urls: ${{secrets.URLS}}
+          targets: ${{secrets.TARGETS}}
           line_token: ${{secrets.LINE_TOKEN}}
           timezone: Asia/Tokyo
