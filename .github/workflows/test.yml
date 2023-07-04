@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - run: echo $targets | base64
+        with:
+          targets: ${{secrets.TARGETS}}
       - name: webnotify
         uses: laddge/webnotify@v2
         with:
